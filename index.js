@@ -101,6 +101,7 @@ console.log(ageKevin, ageSarah, averageAge);
 
 
 
+/*CODING CHALLENGE #1*/
 
 let markHeight= 1.69, markMass =78;
 let johnHeight=1.95, johnMass=92
@@ -117,26 +118,286 @@ let markHigherBMI = markBmi > johnBmi
 console.log(markHigherBMI)
 
 
+const firstName = 'Kevin'
+const jobs = 'teacher'
+const birthYears = 1994
+const year = 2022
+
+const kevin = "I'm " +  firstName + ", a " +  (year - birthYears) + ' Year old ' + jobs + '!';
+console.log(kevin);
+
+
+/*TEMPLATE LITERALS*/
+
+const kevinNew = `I'm ${firstName}, a ${year - birthYears} year old ${jobs}`;  /*USED REVERSED QUOTE MARKS  ``  */
+console.log(kevinNew);
+
+console.log(`Just a normal string...`);
+
+/*creating multi line strings*/
+
+console.log('String with \n\
+multiple \n\
+lines')
+
+/*creating multi line strings using template string*/
+/*using back quote*/
+
+console.log(`String with 
+multiple 
+lines`)
+
+
+/*TAKIN DECISIONS USING IF ELSE STATEMENTS*/
+
+const ages = 15
+
+if (ages >= 18) {
+
+	console.log('Sarah can get a driving licence😊') /*win button plus .  to get an emoji*/
+}
+else{
+	const yearsLeft = 18 - ages
+	console.log(`Sarah cannot get a licence😒, wait another ${yearsLeft} years`)/*using back quote (template strings) */
+}
+
+const birthYearz = 2002
+
+let century/*defining the variable*/ 
+
+if (birthYearz <= 2000) {
+	century = '20th century'
+}
+else{
+	century= '21st century'
+}
+
+console.log(century)
+
+
+
+/*CODING CHALLENGE #2*/
+
+let maryHeight= 1.69, maryMass =78;
+let janeHeight=1.95, janeMass=92
+
+let maryBmi = maryMass / (maryHeight **2)
+console.log(maryBmi) 
+
+let janeBmi = janeMass / (janeHeight **2)
+console.log(janeBmi)
+
+
+let maryHigherBMI = maryBmi > janeBmi
+
+console.log(maryHigherBMI)
+
+if (maryBmi > janeBmi) {
+	console.log(" Mary's BMI is higher than Janes BMI ")
+}
+else{
+console.log("Jane's BMI is higher than Mary's BMI ")
+
+}
+
+
+if (maryBmi > janeBmi) {
+	console.log(` Mary's BMI (${maryBmi}), is higher than Janes BMI (${janeBmi}) `)
+}
+else{
+console.log("Jane's BMI is higher than Mary's BMI ")
+
+}
+
+
+/*Type conversion and coercion*/
+//Type conversion
+
+const inputYear = '1994'
+
+console.log(Number(inputYear)) /*Using the Number function to convert */
+
+console.log(Number(inputYear) + 18)
+
+
+//Type coercion
+
+console.log( "I am " + 23 + " years old") /* the + operatore triggers a coercion*/
+
+console.log('23' - '10' - 3) /* the - operator triggers a coversion but only from string(23 and 10) to number*/  /*also the * and  / operators*/
+console.log('23' + '10' + 3)/* in this case the + converts from number(3) to string*/
+
+
+//FALSY AD TRUTHY VALUES
+//0, '', UNDEFINED, NULL, NaN
+
+//convertin to boolean
+console.log(Boolean(0))	//false
+console.log(Boolean(undefined))   //false
+console.log(Boolean('Kevo'))	//true
+console.log(Boolean({}))//empty object  //true
+console.log(Boolean(''))//false
+
+
+const money = 0  		//zero is a falsy values
+if (money) {//tries to convert to boolean
+	
+	console.log("Don't spend it all")
+}
+else{
+	console.log("You should get a job")	
+}
+
+const money2 = 100  		//100is a truthy values
+if (money2) {//tries to convert to boolean
+	
+	console.log("Don't spend it all")
+}
+else{
+	console.log("You should get a job")	
+}
+
+
+
+let height		//height is undefined here, so its a falsy value
+if (height) {
+	console.log("Yay, height is defined")
+}
+else{
+console.log("Height is undefined")
+}
+
+let heights = 100		//heights is defined here, so its a truthy value
+if (heights) {
+	console.log("Yay, heights is defined")
+}
+else{
+console.log("Heights is undefined")
+}
+
+
+//EQUALITY OPERATORS
+
+
+
+/*const ager = 18
+
+if (ager===18) console.log("You are an adult")
+//when an IF statement has only one line, no need of curly braces {} as shown above
+
+
+
+const aged = '18'  
+
+if (aged==18) console.log("You are an adult")
+
+//the double == converts the type, but === only returns exact match
+// string == int, but string is not === to int
+
+const favourite = Number(prompt("What's your favourite number?")) //Number function to convert from string to number
+console.log(favourite)
+
+if (favourite === 3){
+	console.log("Ok, 3 is a good number")
+}
+else if (favourite === 7){
+	console.log("Ok, 7 is also a good number")
+}
+
+else{
+	console.log("Number is not 3 or 7")
+}
+
+if (favourite !== 23) {
+	console.log("Why is the Number is not 23?")
+}*/
+
+//BOOLEAN LOGIC
+//AND, OR & NOT
+
+const hasDriversLicence = true  //A
+const hasGoodVision = true  //B
+
+console.log(hasDriversLicence && hasGoodVision) //AND
+console.log(hasDriversLicence || hasGoodVision) //OR
+console.log(!hasDriversLicence) // NOT 
+
+const shouldDrive = hasDriversLicence && hasGoodVision
+
+if (shouldDrive) {
+	console.log("She can drive")
+}
+else
+console.log("She cannot drive")
+
+const isTired = false; //C
+
+console.log(hasDriversLicence || hasGoodVision || isTired) //OR
+console.log(hasDriversLicence && hasGoodVision && isTired) //AND
+
+
+const canDrive = hasDriversLicence && hasGoodVision && !isTired
+
+if (canDrive) {
+	console.log("She can drive and is not tired")
+}
+else
+console.log("She cannot drive")
 
 
 
 
 
+//EXERCISE 3
+
+
+const scoreDallas1= 97
+const scoreDallas2= 50
+const scoreDallas3= 101
+
+const scoreKoalas1= 109
+const scoreKoalas2= 95
+const scoreKoalas3= 80
 
 
 
 
+const aveScoreDallas= (scoreDallas1 + scoreDallas2 + scoreDallas3)/3
+const aveScoreKoalas= (scoreKoalas1 + scoreKoalas2 + scoreKoalas3)/3
+
+console.log(aveScoreDallas, aveScoreKoalas)
 
 
+if (aveScoreKoalas > aveScoreDallas) {
+	console.log("Koalas are the winners")
+}
+else if (aveScoreDallas >aveScoreKoalas) {
+	console.log("Dallas are the winners")
+}
 
+else
+console.log("Its a draw")
 
+//Bonus exercise, one has to have more than 100 points so as to be the winners
 
+const scoreDraw = aveScoreKoalas === aveScoreDallas
 
+if ((aveScoreKoalas > aveScoreDallas) &&  aveScoreKoalas >= 100) {
+	console.log("Koalas are the winners")
 
+}
 
+else if ((aveScoreDallas > aveScoreKoalas) && aveScoreDallas >= 100 ) {
+	console.log("Dallas are the winners")
+}
 
+else if( aveScoreKoalas === aveScoreDallas && aveScoreKoalas >= 100 && aveScoreDallas >= 100){
+	console.log("Its a draw")
+}
 
-
+else {
+	console.log("No team wins the trophy")
+}
 
 
 
