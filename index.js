@@ -399,6 +399,161 @@ else {
 	console.log("No team wins the trophy")
 }
 
+//JS Functions
+
+let greeting = "Hello there" //(Global variable) Can be used inside a function
+
+function games(){
+
+	console.log ('sonic the hedgehog')
+	console.log ('super marioo')
+	console.log ('Donkey Kong')
+
+	let title = "Kevoh" //(local variable) any variable declared inside a function can only be used inside the function
+	console.log(title, greeting)
+}
+games() //invoking a function
+
+console.log(greeting)//(Global variable)
+
+
+
+
+
+
+//JS Objects
+
+let alien = {
+	name: 'Kevin',
+	Tech: 'Javascript',
+	laptop:  {			//complex objects, object inside an object
+		cpu: 'i7',
+		ram: '4GB',
+		brand:'Hp'
+	}
+
+}
+console.log(typeof alien) //will return object
+console.log(alien.name)
+console.log(alien.Tech)
+
+console.log(alien.laptop)//complex objects
+console.log(alien.laptop.brand)
+console.log(alien.laptops?.brand) //the '?' will check if the property(in this case, laptops) is defined first, before printing the brand
+								//if not, it will return undefined instead of returning an error(try removing the '?')
+
+//Delete property 
+/*
+delete alien.Tech*/
+console.log(alien)
+
+//this keyword...refers to an object
+
+const person = {
+  fName: "John",
+  lName : "Doe",
+  id    : 5566,
+
+  //Object methods
+  //A method is a function stored as a property
+  
+  fullName : function() {
+    return this.fName + " " + this.lName;
+  }
+}
+
+console.log(person.fullName())  //Accessing object methods
+
+
+
+
+//JAVASCRIPT ARRAYS AND ARRAY METHODS
+
+
+let cars = ["volvo", "BMW", "Nissan"]
+
+console.log(cars)
+
+let numberz =[]//no values in this Array
+numberz.push(2,3,78, "ten") //adding values in an array
+
+
+numberz[4] = "Thirty"		//another method of adding values to an arrray
+console.log(numberz)
+
+
+console.log(numberz.pop()) //to remove the last added value in an array.....Thirty will be removed
+console.log(numberz)
+
+
+
+console.log(numberz.shift()) //to remove the first value in an array.....2 will be removed
+console.log(numberz)
+
+console.log(numberz.unshift(88)) //to add into the first value in an array.....88 will be added  at index 0
+console.log(numberz)
+
+
+console.log(numberz.join("*")) //Joins array elements into a string...in this case, using the seperator * 
+
+const all = cars.concat(numberz) //creates a new array by merging (concatenating) existing arrays
+console.log(all)
+
+
+//Learnt more on JS methods
+/*
+The splice() method adds new items to an array.
+
+The slice() method slices out a piece of an array.
+
+join()
+
+concat() creates a new array by merging (concatenating) existing arrays
+
+
+*/
+
+
+console.log(cars[2]) //Fetching a specific value in an array
+
+let data = [
+
+	"Kevin",
+	"Maina",
+	{Tech: "javascript"}, //Adding an object to a array
+	function(){ console.log("Hello world")} //Adding a function to an array
+]
+console.log(data)
+
+data[3]() //will return Hello world
+
+
+//FOR OF LOOP IN ARRAYS	
+
+let nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+for (let n of nums){
+
+	console.log(n)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
